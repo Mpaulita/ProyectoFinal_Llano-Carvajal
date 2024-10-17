@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/free-photo/black-hole-with-ring-light-large-spiral-center_1340-40103.jpg?t=st=1724802553~exp=1724806153~hmac=5ca3dd3c06924751dcff181024a8a1c7065d3b63aee87d8a5d14eb97dd4f17d4&w=1380');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    color: black;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #812B8C;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #2A2359;
+}
+
+.container { 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.74);
+    width: 30%;
+    text-align: center;
+}
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        width: 50%;
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .container {
+        width: 80%;
+        padding: 15px;
+    }
+}
