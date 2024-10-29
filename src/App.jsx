@@ -4,7 +4,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import RecoverPassword from './components/RecoverPassword';
 import Home from './components/Home';
-
+import './App.css'
 function App() {
   return (
     <Router>

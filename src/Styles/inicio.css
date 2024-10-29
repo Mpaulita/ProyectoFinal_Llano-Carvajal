@@ -1,24 +1,8 @@
-/* Página de inicio */
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('https://img.freepik.com/free-photo/black-hole-with-ring-light-large-spiral-center_1340-40103.jpg?t=st=1724802553~exp=1724806153~hmac=5ca3dd3c06924751dcff181024a8a1c7065d3b63aee87d8a5d14eb97dd4f17d4&w=1380');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    text-align: center;
-}
 .inicio-contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
     min-height: 100vh;
     color: #ffffff;
 }
