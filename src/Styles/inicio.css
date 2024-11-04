@@ -5,6 +5,24 @@
     justify-content: top;
     min-height: 100vh;
     color: #ffffff;
+    margin-top: 2rem;
+}
+
+.header-container {
+    background: linear-gradient(to bottom, #111241, #000000);
+    padding: 20px;
+    border-radius: 8px; /* Opcional: añade bordes redondeados */
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 20px;
+}
+
+.inicio-header, .inicio-descripcion {
+    margin: 0;
+    padding: 0.5rem 0;
 }
 
 .inicio-header {
@@ -44,6 +62,43 @@
     margin-top: 2rem;
 }
 
+.inicio-contenedor input[type="text"] {
+    width: 80%;
+    padding: 8px; /* Se redujo el padding */
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.534);
+    color: rgb(255, 255, 255) !important;
+    font-size: 14px; /* Se redujo el tamaño de la fuente */
+}
+
+
+.horizontal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px; /* Espaciado entre elementos */
+    margin-top: 1rem;
+}
+
+.horizontal-container input[type="text"] {
+    width: 200px; /* Ajusta el ancho del campo de búsqueda según prefieras */
+}
+
+.horizontal-container button {
+    width: 60px;
+    height: 60px;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.horizontal-container button:hover {
+    background-color: #ff6a00;
+}
 /* Añadir algunos estilos responsive */
 @media (max-width: 768px) {
     .inicio-header {
