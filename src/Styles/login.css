@@ -31,12 +31,14 @@
 
 .login-container input[type="text"]::placeholder,
 .login-container input[type="password"]::placeholder {
+    margin-top: 2rem;
     color: rgba(255, 255, 255, 0.644);
     font-size: 12px; /* Se redujo el tamaño de la fuente del placeholder */
 }
 
 .login-container button {
     width: 100%;
+    margin-top: 0.5rem;
     padding: 8px; /* Se redujo el padding */
     border: none;
     border-radius: 6px;
