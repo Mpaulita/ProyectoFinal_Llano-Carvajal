@@ -1,5 +1,5 @@
-import React from 'react';
-import '../Styles/registro.css';
+import React from "react";
+import "../Styles/registro.css";
 
 const Register = () => {
   return (
@@ -8,7 +8,9 @@ const Register = () => {
       <h2>Regístrate y únete a esta comunidad</h2>
       <input type="text" placeholder="Usuario" required />
       <input type="password" placeholder="Contraseña" required />
-      <button onClick={() => window.location.href='/home'}>Iniciar ahora</button>
+      <button onClick={() => (window.location.href = "/home")}>
+        Iniciar ahora
+      </button>
     </div>
   );
 };
