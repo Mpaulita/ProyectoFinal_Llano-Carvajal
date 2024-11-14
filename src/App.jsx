@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Request from "./components/Request";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import RecoverPassword from "./components/RecoverPassword";
@@ -15,9 +16,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/recover-password" element={<RecoverPassword />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/request" element={<Request />} />
-        <Route path="/messages" element={<Messages />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/publicar" element={<Request />} />
+        <Route path="/mensajes" element={<Messages />} />
+        <Route path="/perfil" element={<Profile />} />
       </Routes>
     </Router>
   );

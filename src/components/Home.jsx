@@ -1,18 +1,7 @@
 import React from "react";
 import ButtonGeneral from "./ButtonGeneral";
 import "../Styles/inicio.css";
-
-const Card = ({ title, category, imageSrc }) => {
-  return (
-    <div className="card">
-      <img src={imageSrc} alt={title} className="card-image" />
-      <div className="card-content">
-        <h3 className="card-title">{title}</h3>
-        <p className="card-category">{category}</p>
-      </div>
-    </div>
-  );
-};
+import Card from "./Card";
 
 const Home = () => {
   return (
@@ -53,7 +42,7 @@ const Home = () => {
           texto="Publicar Propuesta"
           pagina="home"
           atributo="help"
-          path="request"
+          path="publicar"
           url={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +64,7 @@ const Home = () => {
           texto="Mensajes"
           pagina="home"
           atributo="request"
-          path="messages"
+          path="mensajes"
           url={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +86,7 @@ const Home = () => {
           texto="Perfil"
           pagina="home"
           atributo="profile"
-          path="profile"
+          path="perfil"
           url={
             <svg
               xmlns="http://www.w3.org/2000/svg"
