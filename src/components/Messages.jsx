@@ -58,7 +58,7 @@ const Messages = () => {
           }
         />
         <ButtonGeneral
-          texto="Perfil"
+          texto="Perfiil"
           pagina="home"
           atributo="profile"
           path="perfil"
