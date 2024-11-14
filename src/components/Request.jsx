@@ -1,24 +1,22 @@
 import React from "react";
 import ButtonGeneral from "./ButtonGeneral";
-import "../Styles/inicio.css";
-import Card from "./Card";
+import "../Styles/Request.css";
 
-const Home = () => {
+const Request = () => {
   return (
-    <div className="inicio-contenedor">
+    <div className="solicitud-contenedor">
       <div className="header-container">
-        <h1 className="inicio-header">Skill Swap</h1>
-        <p className="inicio-descripcion">
-          Intercambia habilidades, aprende nuevas destrezas y conecta con
-          expertos de todo el mundo. ¡Únete ahora y comienza tu viaje de
-          aprendizaje!
+        <h1 className="header-title">SKILLSWAP</h1>
+        <p className="header-description">
+          Crea tus propias solicitudes y encuentra con quien intercambiar tus
+          habilidades
         </p>
       </div>
       <div className="horizontal-container">
         {/*texto, pagina, atributo, path, url*/}
         <ButtonGeneral
           texto="Swap"
-          pagina="home"
+          pagina="request"
           atributo="swap"
           path="home"
           url={
@@ -34,28 +32,6 @@ const Home = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
-              />
-            </svg>
-          }
-        />
-        <ButtonGeneral
-          texto="Publicar Propuesta"
-          pagina="home"
-          atributo="help"
-          path="publicar"
-          url={
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
               />
             </svg>
           }
@@ -84,8 +60,8 @@ const Home = () => {
         />
         <ButtonGeneral
           texto="Perfil"
-          pagina="home"
-          atributo="profile"
+          pagina="request"
+          atributo="perfil"
           path="perfil"
           url={
             <svg
@@ -104,8 +80,6 @@ const Home = () => {
             </svg>
           }
         />
-        <input type="text" placeholder="Buscar" />
-
         <ButtonGeneral
           texto="Salir"
           pagina="home"
@@ -130,26 +104,26 @@ const Home = () => {
         />
       </div>
 
-      <div className="card-container">
-        <Card
-          title="Reparación estantería"
-          category="SkillSwap: Repostería y gastronomía"
-          imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkBMVr1ddI9MzEjHNsoPmfF5HVqouVpteoMVCR6zC7RrGWvEpTWoK5j7YBaQnC4WmbWXA&usqp=CAU"
+      <div className="form-container">
+        <h2 className="form-title">Crear Solicitud:</h2>
+        <input type="text" placeholder="Nombre" className="input-field" />
+        <textarea placeholder="Descripción" className="input-field" rows="3" />
+        <input
+          type="text"
+          placeholder="¿Cuál es tu SkillSwap?"
+          className="input-field"
         />
-        <Card
-          title="Instalación armario"
-          category="SkillSwap: Conocimientos matemáticos"
-          imageSrc="https://maderkit.vtexassets.com/arquivos/ids/166207/mueble-habitacion-closet-armario-1-1-maderkit.jpg?v=638218472161600000"
-        />
-        <Card
-          title="Arreglo impresora"
-          category="SkillSwap: Trabajo y cuidado con niños"
-          imageSrc="https://shop.epson.com.co/media/catalog/product/P/T/PT336EPS75_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=549&width=549&canvas=549:549"
-        />
-        {/* Añade más tarjetas como las anteriores según sea necesario */}
+
+        <div className="upload-container">
+          <div className="upload-image">
+            <button className="upload-button">Upload Image</button>
+          </div>
+        </div>
+
+        <button className="save-button">Guardar</button>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Request;

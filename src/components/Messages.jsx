@@ -1,20 +1,17 @@
 import React from "react";
 import ButtonGeneral from "./ButtonGeneral";
-import "../Styles/inicio.css";
-import Card from "./Card";
-
-const Home = () => {
+import "../Styles/messages.css";
+const Messages = () => {
   return (
-    <div className="inicio-contenedor">
-      <div className="header-container">
-        <h1 className="inicio-header">Skill Swap</h1>
-        <p className="inicio-descripcion">
-          Intercambia habilidades, aprende nuevas destrezas y conecta con
-          expertos de todo el mundo. ¡Únete ahora y comienza tu viaje de
-          aprendizaje!
+    <div className="message-contenedor">
+      <div className="message-header-container">
+        <h1 className="message-header">Skill Swap</h1>
+        <p className="message-descripcion">
+          Crea tus propias solicitudes y encuentra con quien intercambiar tus
+          habilidades
         </p>
       </div>
-      <div className="horizontal-container">
+      <div className="message-horizontal-container">
         {/*texto, pagina, atributo, path, url*/}
         <ButtonGeneral
           texto="Swap"
@@ -56,28 +53,6 @@ const Home = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-          }
-        />
-        <ButtonGeneral
-          texto="Mensajes"
-          pagina="home"
-          atributo="request"
-          path="mensajes"
-          url={
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
               />
             </svg>
           }
@@ -129,27 +104,17 @@ const Home = () => {
           }
         />
       </div>
-
-      <div className="card-container">
-        <Card
-          title="Reparación estantería"
-          category="SkillSwap: Repostería y gastronomía"
-          imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkBMVr1ddI9MzEjHNsoPmfF5HVqouVpteoMVCR6zC7RrGWvEpTWoK5j7YBaQnC4WmbWXA&usqp=CAU"
-        />
-        <Card
-          title="Instalación armario"
-          category="SkillSwap: Conocimientos matemáticos"
-          imageSrc="https://maderkit.vtexassets.com/arquivos/ids/166207/mueble-habitacion-closet-armario-1-1-maderkit.jpg?v=638218472161600000"
-        />
-        <Card
-          title="Arreglo impresora"
-          category="SkillSwap: Trabajo y cuidado con niños"
-          imageSrc="https://shop.epson.com.co/media/catalog/product/P/T/PT336EPS75_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=549&width=549&canvas=549:549"
-        />
-        {/* Añade más tarjetas como las anteriores según sea necesario */}
+      <div className="messages-list">
+        <h2>Mensajes Directos:</h2>
+        <div className="message-item">Guillermo Lopez - Tu coche no gira...</div>
+        <div className="message-item">Daniela Suarez - El sensor esta...</div>
+        <div className="message-item">Jimena Perez - Esta es la direccion...</div>
+        <div className="message-placeholder">
+          <p>Select a chat to reply</p>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Messages;

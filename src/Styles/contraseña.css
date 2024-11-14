@@ -1,16 +1,3 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("https://assets.awwwards.com/awards/images/2021/05/gradients-trends-cover.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: black;
-}
 
 .login-container {
     padding: 20px;
