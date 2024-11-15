@@ -147,7 +147,9 @@ function Profile() {
           <div className='saveDiv'>
             <button className="save-button">Guardar</button>
           </div>
+          
         </div>
+
       </div>
     </div>
   );
