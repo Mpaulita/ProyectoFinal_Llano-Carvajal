@@ -11,7 +11,7 @@ const Home = () => {
         <p className="inicio-descripcion">
           Intercambia habilidades, aprende nuevas destrezas y conecta con
           expertos de todo el mundo. ¡Únete ahora y comienza tu viaje de
-          aprendizajee!
+          aprendizaje!
         </p>
       </div>
       <div className="horizontal-container">
