@@ -1,0 +1,125 @@
+/* Cabecera */
+.header-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header-title {
+    font-size: 2rem;
+    font-weight: bold;
+    -webkit-text-fill-color: white;
+  }
+  
+  .header-description {
+    font-size: 1rem;
+    -webkit-text-fill-color: white;
+    color: #666;
+  }
+  
+  /* Contenedor horizontal para los botones */
+  .horizontal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Ajusta el espaciado entre elementos */
+    margin-top: 1rem;
+  }
+  
+  .horizontal-container button {
+    margin-bottom: 0.5rem;
+    width: 60px;
+    height: 60px;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .horizontal-container button:hover {
+    background-color: #ff6a00;
+  }
+  
+  /* Estilo para la interfaz de perfil */
+  .profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-container {
+    width: 60%;
+  }
+  
+  .form-container .input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  }
+  
+  .input-row {
+    display: flex;
+    gap: 10px;
+  }  
+
+   /* Sección de Carga de Imagen */
+   .upload-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    padding-left: 5%;
+    gap: 12px;
+  }
+  
+  .upload-image1 {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #f0f0f0;
+  }
+  
+  .upload-button1 {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* Botón de Guardar */
+  .saveDiv{
+    padding-left: 3%;
+  }
+  .save-button {
+    background-color: #32cd32;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-button:hover {
+    background-color: #28a745;
+  }
+  
