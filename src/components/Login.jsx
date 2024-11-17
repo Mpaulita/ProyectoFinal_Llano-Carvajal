@@ -1,39 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Styles/login.css";
+import { useForm } from "react-hook-form";
+import { useEffect } from "react";
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { login, error: signUpErrors, isAuthenticated } = useAuth();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  useEffect(() => {
+    if (isAuthenticated) navigate("/home");
+  }, [isAuthenticated]);
 
-
-  const validCredentials = {
-    username: "usuario_demo",
-    password: "123456",
-  };
-
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    setError(""); 
-
-    if (!username || !password) {
-      setError("Por favor, completa todos los campos.");
-      return;
-    }
-
-
-    if (
-      username === validCredentials.username &&
-      password === validCredentials.password
-    ) {
-
-      window.location.href = "/home";
-    } else {
-      setError("Usuario o contraseña incorrectos.");
-    }
-  };
+  const onSubmit = handleSubmit((data) => {
+    login(data);
+  });
 
   return (
     <div className="login-container">
@@ -42,33 +29,22 @@ const Login = () => {
         Intercambia tus habilidades con gente cercana. ¡No hay dinero de por
         medio!
       </h2>
-
-      {/* Formulario controlado */}
-      <form onSubmit={handleLogin}>
+      <form className="login-form" onSubmit={onSubmit}>
         <input
-          type="text"
-          placeholder="Usuario"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
+          type="email"
+          placeholder="Correo"
+          {...register("email", { required: true })}
         />
+        {errors.email && <span>Este campo es requerido</span>}
         <input
           type="password"
           placeholder="Contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
+          {...register("password", { required: true })}
         />
-        <button type="submit">Iniciar Sesión</button>
+        {errors.password && <span>Este campo es requerido</span>}
+        <button type="submit">Registrarse</button>
+        {signUpErrors && <span>{signUpErrors}</span>}
       </form>
-
-      {/* Mensajes de error */}
-      {error && <p className="error-message">{error}</p>}
-
-      <p></p>
-      <button onClick={() => (window.location.href = "/register")}>
-        Regístrate
-      </button>
       <p></p>
       <a className="contra" href="/recover-password">
         ¿Olvidaste tu contraseña?

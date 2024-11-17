@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const signUp = async ({ email, password, name, lastname }) => {
+  const signUp = async ({ email, password, name }) => {
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -31,7 +31,6 @@ export const AuthProvider = ({ children }) => {
       await setDoc(docRef, {
         name,
         email,
-        lastname,
       });
 
       const userDoc = await getDoc(docRef);
@@ -61,7 +60,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const login = async (email, password) => {
+  const login = async ({ email, password }) => {
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
@@ -75,7 +74,19 @@ export const AuthProvider = ({ children }) => {
       });
       setIsAuthenticated(true);
     } catch (error) {
-      setError(error.message);
+      if (error.code === "auth/user-not-found") {
+        setError("User not found");
+      } else if (error.code === "auth/wrong-password") {
+        setError("Wrong password");
+      } else if (error.code === "auth/invalid-email") {
+        setError("Invalid email");
+      } else if (error.code === "auth/invalid-credential") {
+        setError("Invalid credential");
+      } else if (error.code === "auth/operation-not-allowed") {
+        setError("Operation not allowed");
+      } else {
+        setError(error.message);
+      }
     }
   };
 
