@@ -8,6 +8,8 @@ import Home from "./components/Home";
 import Messages from "./components/Messages";
 import Profile from "./components/Profile";
 import "./App.css";
+import SkillSwapCard from "./components/SkillSwapCard"; // Importa el componente
+
 function App() {
   return (
     <Router>
@@ -19,8 +21,10 @@ function App() {
         <Route path="/publicar" element={<Request />} />
         <Route path="/mensajes" element={<Messages />} />
         <Route path="/perfil" element={<Profile />} />
+        <Route path="/skillswap/:id" element={<SkillSwapCard />} /> 
       </Routes>
     </Router>
   );
 }
+
 export default App;

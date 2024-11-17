@@ -1,24 +1,56 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import "../Styles/SkillSwapCard.css"
 import ButtonGeneral from "./ButtonGeneral";
-import "../Styles/inicio.css";
-import Card from "./Card";
-import { useNavigate } from "react-router-dom";
 
-const Home = () => {
-  const navigate = useNavigate();
-  
+
+// Define la información de las tarjetas aquí o en un archivo separado
+const cardDetails = {
+  1: {
+    id: 1,
+    title: "Reparación estantería",
+    category: "SkillSwap: Repostería y gastronomía",
+    imageSrc:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkBMVr1ddI9MzEjHNsoPmfF5HVqouVpteoMVCR6zC7RrGWvEpTWoK5j7YBaQnC4WmbWXA&usqp=CAU",
+    requester: "Gabriela Rivera",
+    description:
+      "Hola, tengo una estantería en mi negocio hace 4 años, pero se me daño su pata derecha el pasado marte 13 y me urge arreglarla. Por favor quien este interesado en hacer Swap conmigo se lo agradecería mucho",
+  },
+  2: {
+    id:2,
+    title: "Instalación armario",
+    category: "SkillSwap: Conocimientos matematicos",
+    imageSrc: "https://maderkit.vtexassets.com/arquivos/ids/166207/mueble-habitacion-closet-armario-1-1-maderkit.jpg?v=638218472161600000",
+    requester: "Carlos Perez",
+    description: "Compre un armario de 2.0x1.0x0.5 en alkosto, vienen todas sus partes en una caja, pero no tengo el tiempo para armarlo y soy muy malo para seguir los manuales.",
+},
+  3: {
+    id:3,
+    title: "Arreglo impresora",
+    category: "SkillSwap: Trabajo y cuido niños",
+    imageSrc: "https://shop.epson.com.co/media/catalog/product/P/T/PT336EPS75_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=549&width=549&canvas=549:549",
+    requester: "Patricia Sanchez ",
+    description: "Soy maestra y necesito arreglar URGENTE mi impresora, la utiliza para tener algunos materiales ludicos con los niños, necesito un tecnico por favor",
+},
+  // Agrega más detalles según sea necesario
+};
+
+const SkillSwapCard = () => {
+  const { id } = useParams(); // Obtener el ID de la URL
+  const card = cardDetails[id]; // Obtener la información correspondiente
+
   return (
-    <div className="inicio-contenedor">
-      <div className="header-container">
-        <h1 className="inicio-header">Skill Swap</h1>
-        <p className="inicio-descripcion">
-          Intercambia habilidades, aprende nuevas destrezas y conecta con
-          expertos de todo el mundo. ¡Únete ahora y comienza tu viaje de
-          aprendizaje!
-        </p>
-      </div>
-      <div className="horizontal-container">
-        {/*texto, pagina, atributo, path, url*/}
+    
+    <div className="skill-swap-card">
+        
+        <div className="header-container1">
+            <h1 className="inicio-header1">Skill Swap</h1>
+            <p className="inicio-descripcion1">
+            ¿Te atrae este intercambio?<p></p>
+            ¡Anímate en este desafío!
+            </p>
+        </div>
+        <div className="horizontal-container">
         <ButtonGeneral
           texto="Swap"
           pagina="home"
@@ -107,7 +139,6 @@ const Home = () => {
             </svg>
           }
         />
-        <input type="text" placeholder="Buscar" />
 
         <ButtonGeneral
           texto="Salir"
@@ -132,29 +163,21 @@ const Home = () => {
           }
         />
       </div>
+      <div className="informacion">
+      <img src={card.imageSrc} alt={card.title} />
+      <h1>{card.title}</h1>
+      <h2>{card.category}</h2>
+      <p>Solicitante: {card.requester}</p>
+      <p>{card.description}</p>
 
-      <div className="card-container">
-        <Card
-         id="1" 
-          title="Reparación estantería"
-          category="SkillSwap: Repostería y gastronomía"
-          imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkBMVr1ddI9MzEjHNsoPmfF5HVqouVpteoMVCR6zC7RrGWvEpTWoK5j7YBaQnC4WmbWXA&usqp=CAU"
-        />
-        <Card
-         id="2" 
-          title="Instalación armario"
-          category="SkillSwap: Conocimientos matemáticos"
-          imageSrc="https://maderkit.vtexassets.com/arquivos/ids/166207/mueble-habitacion-closet-armario-1-1-maderkit.jpg?v=638218472161600000"
-        />
-        <Card
-         id="3" 
-          title="Arreglo impresora"
-          category="SkillSwap: Trabajo y cuidado con niños"
-          imageSrc="https://shop.epson.com.co/media/catalog/product/P/T/PT336EPS75_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=549&width=549&canvas=549:549"
-        />
+      <div className="swap">
+      <button className="swap-button">¡Acepta mi Swap!</button>
       </div>
+      
+      </div>
+      
     </div>
   );
 };
 
-export default Home;
+export default SkillSwapCard;
