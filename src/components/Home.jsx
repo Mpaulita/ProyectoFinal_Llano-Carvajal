@@ -144,7 +144,7 @@ const Home = () => {
          id="2" 
           title="Instalación armario"
           category="SkillSwap: Conocimientos matemáticos"
-          imageSrc="https://maderkit.vtexassets.com/arquivos/ids/166207/mueble-habitacion-closet-armario-1-1-maderkit.jpg?v=638218472161600000"
+          imageSrc="https://www.alkosto.com/medias/750Wx750H-master-hotfolder-transfer-incoming-deposit-hybris-interfaces-IN-media-product-7706112013893-001.jpg?context=bWFzdGVyfGltYWdlc3wxMTIwMTR8aW1hZ2UvanBlZ3xhR1JtTDJnM015OHhNemM0TnpRM05UZ3pOamsxT0M4M05UQlhlRGMxTUVoZmJXRnpkR1Z5TDJodmRHWnZiR1JsY2k5MGNtRnVjMlpsY2k5cGJtTnZiV2x1Wnk5a1pYQnZjMmwwTDJoNVluSnBjeTFwYm5SbGNtWmhZMlZ6TDBsT0wyMWxaR2xoTDNCeWIyUjFZM1F2Tnpjd05qRXhNakF4TXpnNU0xOHdNREV1YW5Cbnw5MjA3YzI2MTMzYjBhYzZkYWM4OWY3MThmYWE4ZDQyMzM4NWEwMjU1YTcyODM5NjIxODY3ZmQxZjUyYjk5Y2Ix"
         />
         <Card
          id="3" 
