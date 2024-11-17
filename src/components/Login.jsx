@@ -42,10 +42,11 @@ const Login = () => {
           {...register("password", { required: true })}
         />
         {errors.password && <span>Este campo es requerido</span>}
-        <button type="submit">Registrarse</button>
+        <button type="submit">Iniciar Sesión</button>
+        <button onClick={() => navigate("/register")}>Registrarse</button>
         {signUpErrors && <span>{signUpErrors}</span>}
       </form>
-      <p></p>
+      <br />
       <a className="contra" href="/recover-password">
         ¿Olvidaste tu contraseña?
       </a>

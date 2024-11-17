@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
@@ -7,7 +7,7 @@ import "../styles/registro.css";
 
 const Registro = () => {
   const navigate = useNavigate();
-  const { signUp, errors: signUpErrors, isAuthenticated } = useAuth();
+  const { signUp, error: signUpErrors, isAuthenticated } = useAuth();
   const {
     register,
     handleSubmit,
@@ -47,6 +47,8 @@ const Registro = () => {
         {errors.password && <span>Este campo es requerido</span>}
         <button type="submit">Registrarse</button>
         {signUpErrors && <span>{signUpErrors}</span>}
+        <br />
+        <Link to="/">Ya estoy registrado</Link>
       </form>
     </div>
   );
