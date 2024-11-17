@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import "../styles/registro.css";
+import "../Styles/registro.css";
 
 const Registro = () => {
   const navigate = useNavigate();
