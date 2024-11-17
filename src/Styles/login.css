@@ -57,6 +57,13 @@
     font-style: italic;
 }
 
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  
 /* Estilos para tablets */
 @media (max-width: 768px) {
     .login-container {
